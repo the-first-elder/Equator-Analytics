@@ -1,6 +1,5 @@
-// src/components/Splash.js
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Make sure you have react-router-dom installed and set up
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 
 const Splash = () => {
@@ -19,7 +18,7 @@ const Splash = () => {
     }, 100);
 
     const timeout = setTimeout(() => {
-      navigate('/dashboard');
+      navigate('dashboard');
     }, 10000);
 
     return () => {
@@ -29,11 +28,11 @@ const Splash = () => {
   }, [navigate]);
 
   return (
-    <div className="bg-[#771011] w-full lg:w-1/2 mx-auto h-screen flex flex-col justify-center items-center p-8">
+    <div className="bg-primary w-full lg:w-1/2 mx-auto h-[100vh] flex flex-col justify-center items-center p-8">
       <img src={logo} alt="Logo" className="w-1/2 mb-4 m-auto" />
       <div className="w-[90%] mx-auto bg-[#a84244] h-2 rounded mt-auto">
         <div
-          className="bg-[#ECE6D3] h-2 rounded"
+          className="bg-secondary h-2 rounded"
           style={{ width: `${progress}%`, transition: 'width 0.1s' }}
         />
       </div>
